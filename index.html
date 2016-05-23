@@ -10,6 +10,9 @@
   <!-- Putting ng-app='myApp' is a custom attribute and says evertyhing inside the body tags is now
   connected to our variable we used in the global namespace. This needs to be the same as the string we assigned in our module  -->
   <body ng-app='myApp'>
-    <p> HELLO WORLD </p>
+    <!-- Now ng-cotroller looks for any name called 'mainCtrl' on 'myApp' module which we declared as app in our app.js -->
+    <div ng-controller='mainCtrl'>
+      <p> HELLO WORLD </p>
+    </div>
   </body>
 </html>
