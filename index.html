@@ -8,8 +8,34 @@
   </head>
 
   <body ng-app='myApp'>
-    <div ng-controller='mainCtrl'>
-      <h2> Hello {{name}} </h2>
+    <!-- Example of two way data binding with ng-model -->
+    <h2> 2-way Data Binding </h2>
+    <div ng-controller='bindingExampleCtrl'>
+      Control the text below: <input ng-model='binding.name'>
+      <h1> {{binding.name}} </h1>
+    </div>
+
+    <!-- Example of prototypical inheritance  -->
+    <h2> Example of Prototypical Inheritance (bad practice) </h2>
+    <div ng-controller='badExampleParentCtrl'>
+      <strong> Parent Ctrl </strong> <input ng-model='name' >
+      <p> {{name}} </p>
+      <div ng-controller='badExampleChildCtrl'>
+        <strong> Child Ctrl:</strong> <input ng-model='name'>
+        <p>  {{name}} </p>
+      </div>
+    </div>
+
+<!-- Proper use of ng-model eliminating prototypical inheritance -->
+    <h2> Example of properly using ng-model with '.' <br>
+      to avoid weird child prototypical inheritance </h2>
+    <div ng-controller='goodExampleParentCtrl'>
+      <strong> Parent Ctrl </strong> <input ng-model='parent.name'>
+      <p>{{parent.name}} </p>
+      <div ng-controller='goodExampleChildCtrl'>
+        <strong> Child Ctrl:</strong>  <input ng-model='child.name'>
+        <p> {{child.name}} </p>
+      </div>
     </div>
   </body>
 </html>
