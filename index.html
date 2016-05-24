@@ -8,8 +8,16 @@
   </head>
 
   <body ng-app='myApp'>
-    <div ng-controller='mainCtrl'>
-      <h2> Hello {{name}} </h2>
+    <div ng-controller='customDirectiveCtrl'>
+      Simple Example Of Custom Directive:
+      <my-custom-directive my-link-name='Linkedin' my-url='https://www.linkedin.com/in/maxjacobsen33'> </my-custom-directive>
+      <br>
+      <p>I can use my directive with a ng-repeat now to show a
+      better use of my-custom-directive. </p>
+      <ul ng-repeat='project in my.projects'>
+        <li> <my-custom-directive my-link-name={{project.name}} my-url={{project.url}}>
+        </my-custom-directive> </li>
+      </ul>
     </div>
   </body>
 </html>
