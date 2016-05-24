@@ -23,7 +23,7 @@ app.controller('customDirectiveCtrl', function($scope){
   ]
 });
 
-app.directive('myCustomDirective', function(){
+app.directive('aTargetBlank', function(){
   return {
     restrict: 'E',
     template: '<a href="{{myUrl}}" target="_blank"> {{myLinkName}} </a>',

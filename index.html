@@ -10,13 +10,13 @@
   <body ng-app='myApp'>
     <div ng-controller='customDirectiveCtrl'>
       Simple Example Of Custom Directive:
-      <my-custom-directive my-link-name='Linkedin' my-url='https://www.linkedin.com/in/maxjacobsen33'> </my-custom-directive>
+      <a-target-blank my-link-name='Linkedin' my-url='https://www.linkedin.com/in/maxjacobsen33'> </a-target-blank>
       <br>
       <p>I can use my directive with a ng-repeat now to show a
-      better use of my-custom-directive. </p>
+      better use of a-target-blank. </p>
       <ul ng-repeat='project in my.projects'>
-        <li> <my-custom-directive my-link-name={{project.name}} my-url={{project.url}}>
-        </my-custom-directive> </li>
+        <li> <a-target-blank my-link-name={{project.name}} my-url={{project.url}}>
+        </a-target-blank> </li>
       </ul>
     </div>
   </body>
