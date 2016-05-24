@@ -1,6 +1,6 @@
 
 var app = angular.module('myApp', []);
 
-app.controller('mainCtrl', function($scope){
+app.controller('ngClassCtrl', function($scope){
   $scope.name = 'Max';
 });
